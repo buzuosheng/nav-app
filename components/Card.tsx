@@ -2,9 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import DivisionLine from './DivisionLine'
 
-const Card = ({ sites }: any) => {
+const Card = ({ title, sites }: any) => {
   return (
-    <div className="flex flex-col w-full h-auto p-2 font-sans no-underline bg-white rounded-xl">
+    <div
+      id={title}
+      className="flex flex-col w-full h-auto p-2 font-sans no-underline bg-white rounded-xl"
+    >
       <div className=" h-[42px] flex flex-row justify-between items-center px-5 text-lg font-bold">
         {sites.cate}
       </div>
