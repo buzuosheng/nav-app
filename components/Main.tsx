@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { data } from '../lib/sites'
 
 const Main = () => {
-  const [target, setTarget] = useState('rep')
+  const [target, setTarget] = useState('erp')
   return (
     <main className="p-10 min-h-screen flex flex-row justify-center items-start bg-[#f2f4f8]">
       <ul className="w-[133px] h-full mr-4 my-0 top-20 left-4 sticky list-none p-0">
