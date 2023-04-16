@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import DivisionLine from './DivisionLine'
 
 const Card = ({ title, sites }: any) => {

@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import Image from 'next/image'
 
 const list = [
   { title: '百度', url: 'https://www.baidu.com/s?tn=94725333_hao_pg&wd=' },
   { title: '谷歌', url: 'https://www.google.com/search?q=' },
   { title: 'JungleScout', url: 'https://keyword.junglescout.cn/k/us/' },
-  { title: '卖家精灵', url: 'https://www.sellersprite.com/v3/keyword-miner/?q=' },
+  {
+    title: '卖家精灵',
+    url: 'https://www.sellersprite.com/v3/keyword-miner/?q='
+  },
   { title: '英亚', url: 'https://www.amazon.co.uk/s?k=' },
   { title: '美亚', url: 'https://www.amazon.com/s?k=' },
   { title: '日亚', url: 'https://www.amazon.co.jp/s?k=' },
@@ -26,6 +30,7 @@ const Header = () => {
 
   return (
     <header className="pt-[25px] pb-[25px] w-full h-auto flex flex-row items-center justify-center text-white bg-sky-500 text-center">
+      <Image className='my-0 mr-20' width={200} height={100} src="/logo.png" alt="俄罗斯卖家资源导航" />
       <div className="w-auto h-auto grid grid-flow-row">
         <div className="flex flex-row">
           {list.map((x) => (
@@ -69,6 +74,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+      <div className='w-[210px]'></div>
     </header>
   )
 }
