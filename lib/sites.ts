@@ -4,7 +4,7 @@ export const data = [
     cate: '跨境ERP',
     sites: [
       {
-        site: '店小蜜',
+        site: '店小秘',
         logo: '/logos/dianxiaomi.ico',
         url: 'https://www.dianxiaomi.com/index.htm',
         priority: true
