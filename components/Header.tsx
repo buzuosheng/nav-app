@@ -4,7 +4,7 @@ import Image from 'next/image'
 const list = [
   { title: '百度', url: 'https://www.baidu.com/s?tn=94725333_hao_pg&wd=' },
   { title: '谷歌', url: 'https://www.google.com/search?q=' },
-  { title: 'JungleScout', url: 'https://keyword.junglescout.cn/k/us/' },
+  { title: 'Jungle Scout', url: 'https://keyword.junglescout.cn/k/us/' },
   {
     title: '卖家精灵',
     url: 'https://www.sellersprite.com/v3/keyword-miner/?q='
@@ -41,16 +41,9 @@ const Header = () => {
         <div className="flex flex-row">
           {list.map((x) => (
             <div
-              key={x.title}
-              // style={
-              //   window.screen.width < 768 && { writingMode: 'vertical-lr' }
-              // }
               className={
-                'w-auto h-auto md:h-9 mr-1 py-1 px-4 rounded-t hover:cursor-pointer hover:bg-white hover:text-sky-500 ' +
+                'w-auto sm:h-9 mr-1 py-1 px-2 md:px-4 rounded-t hover:cursor-pointer hover:bg-white hover:text-sky-500 writing-mode-vertical-lr sm:writing-mode-horizontal' +
                 (target === x.title ? ' bg-white text-sky-500' : '')
-                 + (x.title === 'JungleScout'
-                  ? ' writing-mode-vertical-lr'
-                  : '')
               }
               onClick={() => {
                 setTarget(x.title)
