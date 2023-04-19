@@ -4,7 +4,7 @@ import Image from 'next/image'
 const list = [
   { title: '百度', url: 'https://www.baidu.com/s?tn=94725333_hao_pg&wd=' },
   { title: '谷歌', url: 'https://www.google.com/search?q=' },
-  { title: 'Jungle Scout', url: 'https://keyword.junglescout.cn/k/us/' },
+  { title: 'JungleScout', url: 'https://keyword.junglescout.cn/k/us/' },
   {
     title: '卖家精灵',
     url: 'https://www.sellersprite.com/v3/keyword-miner/?q='
