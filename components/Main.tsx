@@ -5,14 +5,14 @@ import { data } from '../lib/sites'
 const Main = () => {
   const [target, setTarget] = useState('erp')
   return (
-    <main className="p-10 min-h-screen flex flex-row justify-center items-start bg-[#f2f4f8]">
-      <ul className="w-[133px] h-full mr-4 my-0 top-20 left-4 sticky list-none p-0">
+    <main className="py-10 px-2 sm:p-10 md:px-10 lg:px-10 min-h-screen flex flex-row justify-center items-start bg-[#f2f4f8]">
+      <ul className="hidden md:block w-[133px] h-full mr-4 my-0 top-20 left-4 sticky list-none p-0">
         {data.map((cate) => (
           <li key={cate.cate}>
             <div className="flex flex-row items-center">
               <div
                 className={
-                  'w-3 mr-2 border-b-2 border-solid border-zinc-700 duration-500 ' +
+                  'hidden sm:block w-3 mr-2 border-b-2 border-solid border-zinc-700 duration-500 ' +
                   (target === cate.title
                     ? ''
                     : ' opacity-0 pointer-events-none')

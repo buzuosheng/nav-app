@@ -16,6 +16,9 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('tailwindcss-writing-mode')({
+      variants: ['responsive', 'hover']
+    }),
   ]
 }

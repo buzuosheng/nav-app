@@ -5,7 +5,7 @@ import Main from '../components/Main'
 
 function Home() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col w-full'>
       <Helmet
         title="俄罗斯卖家资源导航"
         meta={[{ property: 'og:title', content: 'Home' }]}

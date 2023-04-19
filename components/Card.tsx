@@ -11,7 +11,7 @@ const Card = ({ title, sites }: any) => {
         {sites.cate}
       </div>
       <DivisionLine />
-      <ul className="px-2 my-0 grid grid-flow-row grid-cols-6">
+      <ul className="px-2 my-0 grid grid-flow-row lg:grid-cols-6 md:grid-cols-4 grid-cols-2">
         {sites.sites.map((site: any) => (
           <li
             key={site.site}

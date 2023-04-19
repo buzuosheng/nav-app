@@ -29,16 +29,28 @@ const Header = () => {
   const [target, setTarget] = useState('百度')
 
   return (
-    <header className="pt-[25px] pb-[25px] w-full h-auto flex flex-row items-center justify-center text-white bg-sky-500 text-center">
-      <Image className='my-0 mr-20' width={200} height={100} src="/logo.png" alt="俄罗斯卖家资源导航" />
+    <header className="pt-[25px] pb-[25px] px-2 w-full h-auto flex flex-row items-center md:justify-between justify-center text-white bg-sky-500 text-center">
+      <Image
+        className="md:block hidden my-0 ml-20"
+        width={200}
+        height={100}
+        src="/logo.png"
+        alt="俄罗斯卖家资源导航"
+      />
       <div className="w-auto h-auto grid grid-flow-row">
         <div className="flex flex-row">
           {list.map((x) => (
             <div
               key={x.title}
+              // style={
+              //   window.screen.width < 768 && { writingMode: 'vertical-lr' }
+              // }
               className={
-                'w-auto h-9 mr-1 py-1 px-4 rounded-t hover:cursor-pointer hover:bg-white hover:text-sky-500 ' +
+                'w-auto h-auto md:h-9 mr-1 py-1 px-4 rounded-t hover:cursor-pointer hover:bg-white hover:text-sky-500 ' +
                 (target === x.title ? ' bg-white text-sky-500' : '')
+                 + (x.title === 'JungleScout'
+                  ? ' writing-mode-vertical-lr'
+                  : '')
               }
               onClick={() => {
                 setTarget(x.title)
@@ -48,9 +60,9 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="w-full flex">
           <input
-            className="col-span-1 w-[700px] py-2 px-4 rounded-bl text-xl text-slate-600 outline-none"
+            className="col-span-1 w-auto py-2 px-4 flex-1 rounded-bl text-xl text-slate-600 outline-none"
             placeholder="请输入搜索内容"
             value={value}
             onKeyDown={(e) => {
@@ -74,7 +86,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className='w-[210px]'></div>
+      <div className="w-0 md:w-[210px] hidden md:block"></div>
     </header>
   )
 }
