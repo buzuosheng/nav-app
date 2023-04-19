@@ -39,8 +39,9 @@ const Header = () => {
       />
       <div className="w-auto h-auto grid grid-flow-row">
         <div className="flex flex-row">
-          {list.map((x) => (
+          {list.map((x, i) => (
             <div
+              key={i}
               className={
                 'w-auto sm:h-9 mr-1 py-1 px-2 md:px-4 rounded-t hover:cursor-pointer hover:bg-white hover:text-sky-500 writing-mode-vertical-lr sm:writing-mode-horizontal' +
                 (target === x.title ? ' bg-white text-sky-500' : '')
