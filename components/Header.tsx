@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const list = [
   { title: '百度', url: 'https://www.baidu.com/s?tn=94725333_hao_pg&wd=' },
@@ -80,7 +81,11 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="w-0 md:w-[210px] hidden md:block"></div>
+      <div className="w-0 md:w-[210px] hidden md:block">
+        <Link className='text-gray-50 hover:text-white no-underline' href="/about">
+          联系我们
+        </Link>
+      </div>
     </header>
   )
 }

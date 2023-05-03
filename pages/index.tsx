@@ -18,5 +18,3 @@ function Home() {
 }
 
 export default Home
-
-// import Card from "./Card";
